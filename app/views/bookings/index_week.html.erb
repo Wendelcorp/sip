@@ -1,0 +1,46 @@
+<div class="width-control">
+<p id="notice"><%= notice %></p>
+<div class="row text-center">
+  <h2 class="heading bottom-50">Bookings</h2>
+</div>
+
+<%= form_tag bookings_path, :method => 'get' do %>
+  <%= hidden_field_tag :direction, params[:direction] %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+  <p>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by email" %>
+    <%= submit_tag "Search", :email => nil %>
+  </p>
+<% end %>
+
+<table class="table  table-bordered">
+  <thead>
+    <tr>
+      <th class="col-md-3"><%= sortable 'name' %></th>
+      <th class="col-md-4"><%= sortable 'email' %></th>
+      <th class="col-md-1"><%= sortable 'guests' %></th>
+      <th class="col-md-1"><%= sortable 'start' %></th>
+      <th class="col-md-1"></th>
+      <th class="col-md-1"></th>
+      <th class="col-md-1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @booking_week.each do |booking| %>
+      <tr>
+        <td><%= booking.name %></td>
+        <td><%= booking.email %></td>
+        <td><%= booking.guests %></td>
+        <td><%= booking.start_time %></td>
+        <td><%= link_to 'View', booking %></td>
+        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+        <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+<%= will_paginate @bookings %><br>
+
+<%= link_to 'New Booking', new_booking_path %>
+</div>

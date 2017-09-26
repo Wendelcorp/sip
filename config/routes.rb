@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'bookings/index_month' => 'bookings#index_month'
+  get 'thisweek' => 'bookings#index_week'
   get 'confirmation', to: "welcome#thankyou"
 
   resources :bookings do

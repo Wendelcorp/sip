@@ -4,6 +4,7 @@ class Booking < ApplicationRecord
 
   scope :this_month, -> { where(created_at: Time.now.beginning_of_month..Time.now.end_of_month) }
   scope :today, -> { where(created_at: Time.now.beginning_of_day..Time.now.end_of_day) }
+  scope :this_week, -> { where("? BETWEEN Date.today AND Date.tomorrow", :date)}
   scope :paid, -> { where(status: true) }
   scope :unpaid, -> { where(status: false) }
 

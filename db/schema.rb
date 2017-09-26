@@ -50,15 +50,6 @@ ActiveRecord::Schema.define(version: 20170925204403) do
     t.boolean  "insurance"
   end
 
-  create_table "coupons", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "amount"
-    t.date     "expiry"
-    t.boolean  "one_use",    default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false

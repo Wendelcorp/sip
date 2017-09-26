@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @bookings = Booking.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
     @booking_months = @bookings.this_month
     @booking_today = @bookings.today
+    @booking_week = @bookings.this_week
   end
 
   def index_month
