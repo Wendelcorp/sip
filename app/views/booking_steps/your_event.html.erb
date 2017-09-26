@@ -1,0 +1,40 @@
+<div class="row text-center">
+  <h2 class="heading bottom-50">Your Bar.</h2>
+  <h3>What will we be serving?</h3>
+
+</div>
+<%= form_for @booking, url: wizard_path do |f| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+      <ul>
+      <% @booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+  <%= f.label :event_type %><br>
+  <%= f.select :event_type, ['Condo Party', 'Office Social Event', 'Holiday Party', 'Wedding', 'Industry Conference', 'Media Event', 'Birthday Party'] %>
+</div>
+
+<div class="field">
+  <%= f.label :date %><br>
+  <%= f.date_select :date %>
+</div>
+
+<div class="field">
+  <%= f.label :bar_type %><br>
+  <%= f.select :bar_type, ['One Feature', 'Two Features', 'Three Features'] %>
+</div>
+
+<div class="field">
+  <%= f.label :add_ons %><br>
+  <%= f.select :add_ons, ['option1', 'option2'] %>
+</div>
+
+<div class="actions">
+  <%= f.submit "Continue", :class => 'button-primary' %>
+</div>
+  <% end %>

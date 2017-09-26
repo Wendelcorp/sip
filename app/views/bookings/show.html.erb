@@ -1,0 +1,76 @@
+<div class="width-control">
+  <p id="notice"><%= notice %></p>
+  <div class="row text-center">
+    <h2 class="heading bottom-50">Your Booking</h2>
+    <h3 class="bottom-50">Status: <strong>Unpaid</strong></h3>
+  </div>
+
+
+  <div class="row bottom-50">
+    <table class="table table-bordered">
+        <tr>
+          <th class="col-md-4">Name</th>
+          <th class="col-md-4">Email</th>
+          <th class="col-md-4">Company</th>
+        </tr>
+        <tr>
+          <td class="col-md-4"><%= @booking.name %></td>
+          <td class="col-md-4"><%= @booking.email %></td>
+          <td class="col-md-4"><%= @booking.company %></td>
+        </tr>
+        <tr>
+          <th class="col-md-4">Phone Number</th>
+          <th class="col-md-4">Event Date</th>
+          <th class="col-md-4">Event Type</th>
+        </tr>
+        <tr>
+          <td class="col-md-4"><%= @booking.phone %></td>
+          <td class="col-md-4"><%= @booking.date %></td>
+          <td class="col-md-4"><%= @booking.event_type %></td>
+        </tr>
+        <tr>
+          <th class="col-md-4">Beer</th>
+          <th class="col-md-4">Wine</th>
+          <th class="col-md-4">Spirits</th>
+        </tr>
+        <tr>
+          <td class="col-md-4"><%= @booking.beer %></td>
+          <td class="col-md-4"><%= @booking.wine %></td>
+          <td class="col-md-4"><%= @booking.spirit %></td>
+        </tr>
+        <tr>
+          <th class="col-md-4">Cocktails</th>
+          <th class="col-md-4">Number Of Guests</th>
+          <th class="col-md-4">Start Time</th>
+        </tr>
+        <tr>
+          <td class="col-md-4"><%= @booking.cocktail %></td>
+          <td class="col-md-4"><%= @booking.guests %></td>
+          <td class="col-md-4"><%= @booking.start_time %>:00</td>
+        </tr>
+        <tr>
+          <th class="col-md-4">Glassware</th>
+          <th class="col-md-4">Catering</th>
+          <th class="col-md-4">Insurance</th>
+        </tr>
+        <tr>
+          <td class="col-md-4"><%= @booking.glassware %></td>
+          <td class="col-md-4"><%= @booking.catering %></td>
+          <td class="col-md-4"><%=  %></td>
+        </tr>
+    </table>
+  </div>
+  <div class="row bottom-50">
+    <div class="col-md-8 col-md-offset-2 bottom-50">
+      <div class="subtotal-price text-center">
+        <h1 class="top-50">
+          <strong>Amount Due:</strong> $<%= @booking.subtotal %>.00
+        </h1>
+      </div>
+    </div>
+  </div>
+
+
+  <%= link_to 'Edit', edit_booking_path(@booking) %> |
+  <%= link_to 'Back', bookings_path %>
+</div>

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  details: MyString
+  name: MyString
+  email: MyString
+  phone: MyString
+  company: MyString
+  event_type: MyString
+  date: 2017-07-28 13:37:49
+  bar_type: MyString
+  add_ons: MyString
+  address: MyString
+  guests: MyString
+  start_time: 2017-07-28 13:37:49
+  permit: false
+  additional: MyString
+  details: MyString
+
+two:
+  details: MyString
+  name: MyString
+  email: MyString
+  phone: MyString
+  company: MyString
+  event_type: MyString
+  date: 2017-07-28 13:37:49
+  bar_type: MyString
+  add_ons: MyString
+  address: MyString
+  guests: MyString
+  start_time: 2017-07-28 13:37:49
+  permit: false
+  additional: MyString
+  details: MyString

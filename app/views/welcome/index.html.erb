@@ -1,0 +1,206 @@
+  <div class="col-sm-12 hero page-bg text-center bottom-100">
+    <div id="hero-container" class="animation-wrapper">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+    </div>
+    <!-- <ul class="background-icons-container">
+      <li class="background-icons-layer">
+        <%= image_tag "cocktail-header-left.svg", class: "header-icons-left"  %>
+        <%= image_tag "cocktail-header-right.svg", class: "header-icons-right"  %>
+      </li>
+      <li class="background-icons-layer">
+        <%= image_tag "cocktail-header-left.svg", class: "header-icons-left"  %>
+        <%= image_tag "cocktail-header-right.svg", class: "header-icons-right"  %>
+      </li>
+    </ul> -->
+    <div id="hero-content" class="heading-container animated bounceInUp">
+    <%= image_tag "bottle-pop.svg", class: "hero-illustration tada animated"  %>
+    <div class="headline-box">
+      <h2 id="homepage-headline" class="heading typed-heading">Build Your Bar.</h2>
+    </div>
+    <h3 id="homepage-subhead" class="">Booking your pop-up bar experience takes less than 5 minutes!</h2>
+    <%= link_to 'Get Started', new_booking_path, :class => "primary-button-hero animated animatedhover pulse infinite" %>
+    </div>
+    <div class="mouse">
+      <div class="scroll"></div>
+    </div>
+  </div>
+<div class="width-control">
+  <div class="row bottom-50">
+    <div class="col-sm-8 col-sm-offset-2 home-feature wow bounceInUp">
+      <div class="col-sm-6"><%= image_tag "chemistry.svg", class: "home-illustration home-illustration-1" %></div>
+      <div class="col-sm-6">
+        <h3 class="feature-heading">Build Your Bar</h3>
+        <p>Get started by clicking the "Play" button above & build your bar. SIPBAR includes a full bar setup with craft beer, wine, spirits, and certified bartenders.</p>
+      </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-2 home-feature wow bounceInUp">
+      <div class="col-sm-6 col-sm-push-6"><%= image_tag "calendar.svg", class: "home-illustration home-illustration-2"  %></div>
+      <div class="col-sm-6 col-sm-pull-6 text-right-not-xs">
+        <h3 class="feature-heading">Book Your Event</h3>
+        <p>Tell us the date & time of your event, and the number of people you are expecting. Set the duration of your event to 2 hours or longer. </p>
+      </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-2 home-feature wow bounceInUp">
+      <div class="col-sm-6"><%= image_tag "camera.svg", class: "home-illustration home-illustration-3"  %></div>
+      <div class="col-sm-6">
+        <h3 class="feature-heading">Make Some Memories</h3>
+        <p>Do less to impress! Just book your SIPBAR and let us take care of the rest. We set up an incredible bar experience with premium products for any event.</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row bottom-50 text-center">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3 class="feature-heading">Featured On</h3>
+      <div class="col-sm-12"><%= image_tag "logo-parade.png", class: "logo-parade"  %></div>
+    </div>
+  </div> -->
+  <div class="row bottom-50 text-center wow bounceInUp">
+
+      <h3 class="feature-heading bottom-50">You Might Be Asking...</h3>
+      <!-- <p>There's a lot of buzz about Sipbar.</p> -->
+      <div class="accordion col-sm-8 col-sm-offset-2">
+
+
+    	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+    		<div class="panel panel-default">
+    			<div class="panel-heading" role="tab" id="headingOne">
+    				<h4 class="panel-title">
+    					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    						<i class="more-less glyphicon glyphicon-plus"></i>
+    						What is SIPBAR?
+    					</a>
+    				</h4>
+    			</div>
+    			<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+    				<div class="panel-body">
+    					  SIPBAR is an easy to book pop-up bar service for any type of event.  SIPBAR activates a full bar experience; prices include smart-serve certified bartenders, selections of craft beer & quality wines, a full back bar, signature cocktails, and anything else that our clients might need to host a successful event.
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="panel panel-default">
+    			<div class="panel-heading" role="tab" id="headingTwo">
+    				<h4 class="panel-title">
+    					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+    						<i class="more-less glyphicon glyphicon-plus"></i>
+    						When should I use SIPBAR?
+    					</a>
+    				</h4>
+    			</div>
+    			<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+    				<div class="panel-body">
+    					SIPBAR services weddings, cocktail parties, condo party rooms, private homes, office socials, client parties, conference & speaker events, receptions, charity events, gallery openings, retail pop-ups, community events and much more.
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="panel panel-default">
+    			<div class="panel-heading" role="tab" id="headingThree">
+    				<h4 class="panel-title">
+    					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+    						<i class="more-less glyphicon glyphicon-plus"></i>
+    						What services does SIPBAR offer?
+    					</a>
+    				</h4>
+    			</div>
+    			<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+    				<div class="panel-body">
+    					Customize the bar for your event. You can build your bar to include a selection of craft beer, red & white wines (rosé too!), a full back bar for mixed drinks, as well as a signature cocktail station! Thinking of a Moscow Mule, Caesars, Old Fashioneds, or Margaritas for your event? Us too.
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="panel panel-default">
+    			<div class="panel-heading" role="tab" id="headingFour">
+    				<h4 class="panel-title">
+    					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+    						<i class="more-less glyphicon glyphicon-plus"></i>
+    						How much is SIPBAR?
+    					</a>
+    				</h4>
+    			</div>
+    			<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+    				<div class="panel-body">
+    					SIPBAR is priced based on how you choose to build your bar. Prices can start as low as $15 person for a 2 hour open bar. Customizing the bar to meet your event needs can increase prices up to $45 per person or more.
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="panel panel-default">
+    			<div class="panel-heading" role="tab" id="headingFive">
+    				<h4 class="panel-title">
+    					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+    						<i class="more-less glyphicon glyphicon-plus"></i>
+    						Licensing and permitting for your event
+    					</a>
+    				</h4>
+    			</div>
+    			<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+    				<div class="panel-body">
+              Public Event: SOP required. All events that are available to the public (including by online ticket purchases) will require you to submit to the LCBO an Application for a Special Occassion Permit. This is a requirement for booking SIPBAR at a public event. SIPBAR can easily service your event after you have sent us your approved SOP.
+
+Private Event: SOP not required. Events that take place in a private office or resident and are invite only (not available for public access) do not require an SOP.
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="panel panel-default">
+    			<div class="panel-heading" role="tab" id="headingSix">
+    				<h4 class="panel-title">
+    					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+    						<i class="more-less glyphicon glyphicon-plus"></i>
+    						How long in advance do I need to book SIPBAR?
+    					</a>
+    				</h4>
+    			</div>
+    			<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+    				<div class="panel-body">
+              SIPBAR is both on-demand and can be scheduled in advanced.
+              SIPBAR can be booked as soon as the day before your event, as long as you have the Special Occasions Permit approved by the LCBO, or your event is private (no SOP). You can schedule a SIPBAR weeks in advanced as well.
+    				</div>
+    			</div>
+    		</div>
+
+
+    	</div><!-- panel-group -->
+
+    </div><!-- container -->
+  </div>
+</div>
+
+<script>
+
+
+var options = {
+  strings: ["Build Your Bar.", "Book Your Event.", "Make Some Memories."],
+  typeSpeed: 60,
+  backSpeed: 40,
+  startDelay: 3000,
+  backDelay: 3000,
+}
+
+var typed = new Typed(".typed-heading", options);
+
+$(function() {
+    var parallaxOptions = {}
+    $('.background-icons-layer').parallax({
+      mouseport: $(".background-icons-container")
+    });
+
+    /*******************************
+    * ACCORDION WITH TOGGLE ICONS
+    *******************************/
+	function toggleIcon(e) {
+        $(e.target)
+            .prev('.panel-heading')
+            .find(".more-less")
+            .toggleClass('glyphicon-plus glyphicon-minus');
+    }
+    $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+    $('.panel-group').on('shown.bs.collapse', toggleIcon);
+});
+</script>
