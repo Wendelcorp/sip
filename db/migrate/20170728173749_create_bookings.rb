@@ -12,7 +12,7 @@ class CreateBookings < ActiveRecord::Migration[5.0]
       t.string :add_ons
       t.string :address
       t.string :guests
-      t.time :start_time
+      t.integer :start_time
       t.boolean :permit
       t.string :additional
       t.string :details
