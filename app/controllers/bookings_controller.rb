@@ -17,6 +17,10 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
     @booking_months = @bookings.this_month
   end
+  def index_week
+    @bookings = Booking.all
+    @booking_week = @bookings.this_week.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
+  end
 
   # GET /bookings/1
   # GET /bookings/1.json

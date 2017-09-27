@@ -1,7 +1,7 @@
 <div class="width-control">
 <p id="notice"><%= notice %></p>
 <div class="row text-center">
-  <h2 class="heading bottom-50">Bookings</h2>
+  <h2 class="heading bottom-50">This Week</h2>
 </div>
 
 <%= form_tag bookings_path, :method => 'get' do %>
@@ -18,7 +18,7 @@
     <tr>
       <th class="col-md-3"><%= sortable 'name' %></th>
       <th class="col-md-4"><%= sortable 'email' %></th>
-      <th class="col-md-1"><%= sortable 'guests' %></th>
+      <th class="col-md-1"><%= sortable 'date' %></th>
       <th class="col-md-1"><%= sortable 'start' %></th>
       <th class="col-md-1"></th>
       <th class="col-md-1"></th>
@@ -31,8 +31,8 @@
       <tr>
         <td><%= booking.name %></td>
         <td><%= booking.email %></td>
-        <td><%= booking.guests %></td>
-        <td><%= booking.start_time %></td>
+        <td><%= booking.date %></td>
+        <td><%= booking.start_time %>:00</td>
         <td><%= link_to 'View', booking %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -40,7 +40,7 @@
       <% end %>
   </tbody>
 </table>
-<%= will_paginate @bookings %><br>
+<%= will_paginate @booking_week %><br>
 
 <%= link_to 'New Booking', new_booking_path %>
 </div>

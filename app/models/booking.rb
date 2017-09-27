@@ -2,9 +2,9 @@ class Booking < ApplicationRecord
   belongs_to :user
   before_save :calculate
 
-  scope :this_month, -> { where(created_at: Time.now.beginning_of_month..Time.now.end_of_month) }
-  scope :today, -> { where(created_at: Time.now.beginning_of_day..Time.now.end_of_day) }
-  scope :this_week, -> { where("? BETWEEN Date.today AND Date.tomorrow", :date)}
+  scope :this_month, -> { where(date: Date.today.beginning_of_month..30.days.from_now) }
+  scope :today, -> { where(date: Date.today.beginning_of_day..Date.today.end_of_day) }
+  scope :this_week, -> { where(date: Date.today..7.days.from_now)}
   scope :paid, -> { where(status: true) }
   scope :unpaid, -> { where(status: false) }
 
